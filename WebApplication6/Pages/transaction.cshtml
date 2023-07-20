@@ -1,0 +1,31 @@
+﻿@page
+@model WebApplication6.Pages.transactionModel
+@{
+}
+
+<h3>Secure Transactions</h3>
+
+@if (Model.hasData)
+{
+   <p>Amount is @Model.amount</p>
+   <p>Purpose of the transfer:@Model.note</p>
+   
+}
+
+<div class="container">
+    <form method="POST">
+        <label for="upiid">UPI ID</label></br>
+        <input type="text" id="upiid" name="upiid"</br>
+        </br>
+
+        <label for="amount">Amount</label></br>
+        <input type="text" id="amount" name="amount"</br>
+        </br>
+
+        <label for="note">Note</label></br>
+        <textarea id="note" name="note" style="height:50px"></textarea></br>
+        </br>
+
+    <input type="submit" value="Make transaction" />
+    </form>
+</div>
